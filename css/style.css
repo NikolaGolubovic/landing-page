@@ -1,0 +1,468 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;700;800&display=swap');
+:root {
+    font-size: 16px;
+    --cyan: rgb(77, 150, 169);
+    --cyan-light: rgba(77, 150, 169, 0.7);
+    --purple: rgb(132, 91, 183);
+    --purple-light: rgba(132, 91, 183, 0.7);
+    --gray: rgb(128, 128, 128);
+    --white: rgb(255, 255, 255);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+button {
+    border: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    color: var(--white);
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s all;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+@media (min-width: 280px) {
+    .container {
+        width: 95%;
+        margin: 0 auto;
+    }
+    .app-page {
+        width: 100%;
+        overflow: hidden;
+    }
+    /* LOGO */
+    .meet-logo {
+        text-align: center;
+        padding: 50px;
+        transform: scale(0.9);
+        margin-bottom: 20px;
+    }
+    /* FIRST PAGE - PAGE WITH BASIC INFORMATION */
+    .page-basic {
+        display: flex;
+        flex-direction: column;
+    }
+    /* FACES IMAGES */
+    .faces-container-one {
+        order: 1;
+    }
+    .faces-container-two {
+        order: 2;
+    }
+    .page-basic-desc {
+        order: 3;
+        margin-top: 40px;
+    }
+    .faces-container-one, .faces-container-two {
+        display: flex;
+        justify-content: space-between;
+        width: 115%;
+        position: relative;
+        left: -20px;
+    }
+    .faces-container-one .faces-wrapper:nth-child(odd), .faces-container-two .faces-wrapper:nth-child(odd) {
+        position: relative;
+        top: 30px;
+    }
+    .faces-container-one img, .faces-container-two img {
+        height: 45px;
+        width: 45px;
+        border-radius: 50%;
+    }
+    /* BASIC INFORMATION TEXT AND BUTTONS */
+    .page-basic-desc {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    .page-basic-desc h1 {
+        width: 80%;
+        text-align: center;
+        align-self: center;
+        font-size: 2rem;
+        font-weight: 800;
+        line-height: 1.1;
+        padding: 10px 30px;
+    }
+    .page-basic-desc p, .page-extra-desc__text, .footer-explanation {
+        color: var(--gray);
+        line-height: 1.5;
+        padding: 20px 10px;
+        text-align: center;
+    }
+    .page-basic-desc .btn-download {
+        background: var(--cyan);
+        margin-bottom: 10px;
+    }
+    .btns-download-and-what {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .btn-download {
+        width: 160px;
+    }
+    .btn-what-is {
+        background: var(--purple);
+        margin-bottom: 10px;
+        width: 140px;
+    }
+    .btn-page-num {
+        position: relative;
+        border-radius: 30px;
+        padding: 20px;
+        margin-top: 150px;
+        color: rgba(0, 0, 139, 0.5);
+        border: 1px solid rgba(0, 0, 139, 0.1);
+    }
+    .btn-page-num:before {
+        content: "";
+        display: block;
+        width: 1px;
+        height: 80px;
+        position: absolute;
+        top: -80px;
+        left: 27px;
+        background: rgba(0, 0, 139, 0.1);
+    }
+    .btn-02 {
+        bottom: 10px;
+    }
+    /* SECOND PAGE */
+    .page-extra {
+        display: flex;
+        flex-direction: column;
+    }
+    .users-images {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .users-images img {
+        width: 40%;
+        margin: 10px;
+        border-radius: 10px;
+    }
+    .page-extra-desc {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .page-extra-desc>* {
+        margin-bottom: 20px;
+    }
+    .page-extra-desc__basic-idea {
+        color: var(--cyan);
+        text-align: center;
+        letter-spacing: 1.1px;
+        margin: 20px;
+        text-transform: uppercase;
+    }
+    .page-extra-desc__title {
+        width: 90%;
+        text-align: center;
+        align-self: center;
+        font-size: 1.5rem;
+        font-weight: 800;
+        line-height: 1.1;
+    }
+    /* FOOTER */
+    footer {
+        position: relative;
+        top: -60px;
+        height: 50vh;
+        width: 100%;
+        color: white;
+        background: url("../assets/mobile/image-footer.jpg");
+        background-position: center;
+        background-size: cover;
+        z-index: -5;
+    }
+    footer:after {
+        content: ' ';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: var(--cyan-light);
+        transition: background-color .5s;
+        z-index: -1;
+    }
+    .footer-explanation {
+        color: white;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .footer-explanation h1 {
+        width: 90%;
+        text-align: center;
+        align-self: center;
+        font-size: 1.5rem;
+        font-weight: 800;
+        line-height: 1.1;
+    }
+    .btn-footer {
+        background: var(--purple);
+    }
+}
+
+@media (min-width: 500px) {
+    .container {
+        width: 80%;
+    }
+    .faces-container-one, .faces-container-two {
+        width: 115%;
+        left: -30px;
+    }
+    .faces-container-one .faces-wrapper:nth-child(odd), .faces-container-two .faces-wrapper:nth-child(odd) {
+        position: relative;
+        top: 30px;
+    }
+    .faces-container-one img, .faces-container-two img {
+        height: 65px;
+        width: 65px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 70%;
+    }
+    .faces-container-one, .faces-container-two {
+        width: 115%;
+        left: -35px;
+    }
+    .faces-container-one .faces-wrapper:nth-child(odd), .faces-container-two .faces-wrapper:nth-child(odd) {
+        position: relative;
+        top: 30px;
+    }
+    .faces-container-one img, .faces-container-two img {
+        height: 95px;
+        width: 95px;
+    }
+    .page-basic-desc h1 {
+        width: 80%;
+        text-align: center;
+        align-self: center;
+        font-size: 2.4rem;
+        font-weight: 800;
+        line-height: 1.1;
+        padding: 10px 30px;
+        margin: 30px 0;
+    }
+    .btns-download-and-what {
+        flex-direction: row;
+        margin: 20px;
+    }
+    .btn-download {
+        margin-right: 10px;
+    }
+    .page-extra-desc__basic-idea {
+        font-size: 1.3rem;
+    }
+    .page-extra-desc__title {
+        font-size: 2.6rem;
+    }
+    .page-extra-desc__text {
+        padding: 10px;
+        line-height: 2.5;
+        font-size: 1rem;
+    }
+    .footer-explanation {
+        font-size: 1.5rem;
+    }
+    .footer-explanation h1 {
+        font-size: 2.5rem;
+    }
+    .btn-footer {
+        transform: scale(1.2);
+    }
+    .users-images {
+        display: flex;
+        flex-wrap: nowrap;
+        padding: 0 10px;
+    }
+    .users-images img {
+        width: 23%;
+        height: 150px;
+        margin: 10px;
+        border-radius: 10px;
+        border-radius: 10px;
+    }
+}
+
+@media (min-width: 1024px) {
+    footer {
+        background: url("../assets/tablet/image-footer.jpg");
+        background-size: cover;
+    }
+    .faces-container-one, .faces-container-two {
+        width: 115%;
+        left: -35px;
+    }
+    .faces-container-one .faces-wrapper:nth-child(odd), .faces-container-two .faces-wrapper:nth-child(odd) {
+        position: relative;
+        top: 40px;
+    }
+    .faces-container-one img, .faces-container-two img {
+        height: 115px;
+        width: 115px;
+    }
+    .page-basic-desc h1 {
+        width: 60%;
+    }
+    .btns-download-and-what {
+        flex-direction: row;
+        margin: 20px;
+    }
+    .btn-download {
+        margin-right: 10px;
+    }
+    .page-basic-desc p {
+        margin-bottom: 50px;
+        padding: 0 100px;
+    }
+    .page-extra-desc__text {
+        padding: 10px;
+        line-height: 2.5;
+        font-size: 1.3rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    .page-basic {
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .faces-container-one {
+        order: 1;
+    }
+    .page-basic-desc {
+        order: 2;
+    }
+    .faces-container-two {
+        order: 3;
+    }
+    .faces-container-one, .faces-container-two {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+        position: static;
+    }
+    /* JAKI SELEKTORI PAZNJA */
+    .faces-container-one .faces-wrapper:nth-child(odd), .faces-container-two .faces-wrapper:nth-child(odd) {
+        position: static;
+    }
+    .faces-container-one .faces-wrapper:nth-child(2), .faces-container-one .faces-wrapper:nth-child(5) {
+        position: relative;
+        top: -20px;
+    }
+    .faces-container-two .faces-wrapper:nth-child(2), .faces-container-two .faces-wrapper:nth-child(5) {
+        position: relative;
+        top: 20px;
+    }
+    .faces-container-one, .faces-container-two {
+        position: relative;
+    }
+    .faces-container-two {
+        left: 35px;
+    }
+    .faces-container-one img, .faces-container-two img {
+        height: 85px;
+        width: 85px;
+        border-radius: 50%;
+    }
+    .page-basic-desc {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+        position: relative;
+        top: -80px;
+        width: 50%;
+        margin-top: 0;
+    }
+    .page-basic-desc h1 {
+        font-size: 1.7rem;
+        padding: 0;
+    }
+    .page-basic-desc p {
+        font-size: 0.95rem;
+        padding: 0;
+    }
+    .btn-download {
+        width: 140px;
+        font-size: 0.6rem;
+    }
+    .btn-what-is {
+        width: 110px;
+        font-size: 0.5rem;
+    }
+    .page-extra-desc {
+        padding: 50px 100px;
+        line-height: 1;
+    }
+    .page-extra-desc__text {
+        line-height: 1.4;
+    }
+    .btn-02 {
+        bottom: -40px;
+    }
+    .footer-explanation {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 5px;
+    }
+    .footer-explanation h1 {
+        font-size: 2.4rem;
+        text-align: center;
+        width: 25%;
+    }
+    .footer-explanation p {
+        font-size: 1rem;
+        width: 45%;
+        text-align: center;
+        padding: 0 50px;
+    }
+    .footer-btn-wrapper {
+        width: 30%;
+    }
+    .btn-footer {
+        transform: scale(0.9);
+    }
+}
+
+@media (min-width: 1400px) {
+    .faces-container-one img, .faces-container-two img {
+        height: 115px;
+        width: 115px;
+    }
+}
+
+@media (min-width: 1700px) {
+    .container {
+        width: 60%;
+    }
+}
