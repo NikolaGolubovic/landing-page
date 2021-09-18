@@ -113,7 +113,7 @@ button:hover {
         justify-content: center;
     }
     .btn-download {
-        width: 160px;
+        min-width: 160px;
     }
     .btn-what-is {
         background: var(--purple);
@@ -412,19 +412,30 @@ button:hover {
     }
     .page-basic-desc h1 {
         font-size: 1.7rem;
-        padding: 0;
+        position: relative;
+        top: 50px;
     }
     .page-basic-desc p {
         font-size: 0.95rem;
-        padding: 0;
+        position: relative;
+        top: 50px;
+        padding: 0 50px;
+    }
+    .page-basic-desc .btn-page-num {
+        top: 80px;
     }
     .btn-download {
-        width: 140px;
-        font-size: 0.6rem;
+        min-width: 150px;
+        font-size: 0.8rem;
     }
     .btn-what-is {
-        width: 110px;
-        font-size: 0.5rem;
+        width: 130px;
+        font-size: 0.8rem;
+    }
+    .btns-download-and-what {
+        position: relative;
+        top: 100px;
+        left: 10px;
     }
     .page-extra-desc {
         padding: 50px 100px;
@@ -433,8 +444,12 @@ button:hover {
     .page-extra-desc__text {
         line-height: 1.4;
     }
+    .btn-page-num {
+        top: 40px;
+        left: 20px;
+    }
     .btn-02 {
-        bottom: -40px;
+        bottom: -150px;
     }
     .footer-explanation {
         display: flex;
@@ -483,6 +498,6 @@ button:hover {
 
 @media (min-width: 2400px) {
     .container {
-        width: 40%;
+        width: 45%;
     }
 }
