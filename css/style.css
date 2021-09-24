@@ -16,6 +16,7 @@
 
 body {
     font-family: 'Red Hat Display', sans-serif;
+    background: rgb(238, 235, 235);
 }
 
 button {
@@ -36,6 +37,7 @@ button:hover {
     .container {
         width: 95%;
         margin: 0 auto;
+        background: white;
     }
     .app-page {
         width: 100%;
@@ -138,9 +140,13 @@ button:hover {
         left: 27px;
         background: rgba(0, 0, 139, 0.1);
     }
-    .btn-02 {
-        bottom: 10px;
+    .btn-wrapper {
         position: relative;
+        bottom: -57px;
+    }
+    .btn-02 {
+        position: relative;
+        bottom: 20px;
         z-index: 5;
     }
     .btn-02:hover {
@@ -188,7 +194,6 @@ button:hover {
     /* FOOTER */
     footer {
         position: relative;
-        top: -60px;
         height: 50vh;
         width: 100%;
         color: white;
@@ -310,7 +315,7 @@ button:hover {
     }
     .users-images img {
         width: 23%;
-        height: 150px;
+        height: 230px;
         margin: 10px;
         border-radius: 10px;
         border-radius: 10px;
@@ -437,26 +442,24 @@ button:hover {
         top: 100px;
         left: 10px;
     }
+    .page-extra-desc, .users-images {
+        margin-top: 80px;
+    }
     .page-extra-desc {
-        padding: 50px 100px;
-        line-height: 1;
+        padding: 50px 140px;
     }
     .page-extra-desc__text {
-        line-height: 1.4;
+        line-height: 1.8;
     }
     .btn-page-num {
         top: 40px;
         left: 20px;
-    }
-    .btn-02 {
-        bottom: -150px;
     }
     .footer-explanation {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        padding: 20px 5px;
     }
     .footer-explanation h1 {
         font-size: 2.4rem;
